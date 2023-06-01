@@ -1,0 +1,58 @@
+p {
+  display: inline-block;
+  margin: 0;
+  font-size: 45px;
+  color: #44797b;
+}
+
+h2 {
+  position: absolute;
+  font-size: 246px;
+}
+
+.rh-typewriter-container {
+  position: relative;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+}
+
+.typing-text span {
+  position: relative;
+  display: inline-block;
+}
+
+.typing-text span::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  /* border-left: 2px solid #44797b; */
+  animation: typing 5s infinite;
+  /* animation-delay: 5s; */
+
+  z-index: 10;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
